@@ -1,7 +1,7 @@
-/* ================================
+/* =========================================
    BIJLI GHAR CASH COUNTER
-   MAIN CSS
-================================ */
+   MODERN CLEAN UI
+========================================= */
 
 * {
   box-sizing: border-box;
@@ -11,100 +11,110 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f3f6fa;
-  color: #1f2937;
+  background: #f4f7fb;
+  color: #172033;
 }
 
-/* ================================
+/* =========================================
    MAIN CONTAINER
-================================ */
+========================================= */
 
 .container {
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 20px 50px;
+  padding: 22px;
 }
 
-/* ================================
+/* =========================================
    HEADER
-================================ */
+========================================= */
 
 .header {
   background: white;
   border-radius: 14px;
-  padding: 25px 28px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 24px 28px;
+  margin-bottom: 18px;
   border-left: 5px solid #2563eb;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
 }
 
 .header h1 {
   margin: 0;
-  font-size: 30px;
-  color: #111827;
+  font-size: 25px;
+  font-weight: 700;
+  color: #172033;
 }
 
 .header p {
-  margin: 7px 0 0;
+  margin: 6px 0 0;
   color: #64748b;
-  font-size: 15px;
+  font-size: 13px;
 }
 
-/* ================================
+/* =========================================
    SUMMARY CARDS
-================================ */
+========================================= */
 
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .summary-card {
   background: white;
-  padding: 18px 12px;
+  min-height: 82px;
+  padding: 14px 12px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
-  border-top: 4px solid #2563eb;
+  border-top: 3px solid #2563eb;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.10);
 }
 
 .summary-card span {
-  display: block;
-  font-size: 13px;
   color: #64748b;
-  margin-bottom: 7px;
+  font-size: 11px;
+  margin-bottom: 6px;
 }
 
 .summary-card strong {
-  display: block;
-  font-size: 20px;
   color: #111827;
+  font-size: 17px;
 }
 
-/* ================================
-   ENTRY CARD
-================================ */
+/* =========================================
+   ENTRY / REPORT CARD
+========================================= */
 
 .entry-card {
   background: white;
   border-radius: 14px;
-  padding: 25px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
 }
 
 .entry-card h2 {
-  margin: 0 0 20px;
-  font-size: 22px;
-  color: #111827;
+  margin: 0 0 18px;
+  font-size: 18px;
+  color: #172033;
 }
 
-/* ================================
+/* =========================================
    FORM
-================================ */
+========================================= */
 
 .form-grid {
   display: grid;
@@ -118,68 +128,89 @@ body {
 }
 
 .field label {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 7px;
-  color: #374151;
+  color: #475569;
+  margin-bottom: 6px;
 }
 
-.field input {
+.field input,
+.field select,
+input,
+select {
   width: 100%;
-  height: 40px;
-  padding: 0 11px;
+  height: 38px;
   border: 1px solid #cbd5e1;
   border-radius: 7px;
+  padding: 0 10px;
+  background: #fff;
+  color: #172033;
+  font-size: 13px;
   outline: none;
-  font-size: 14px;
-  background: white;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
-.field input:focus {
+.field input:focus,
+.field select:focus,
+input:focus,
+select:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
 }
 
-.field input::placeholder {
-  color: #94a3b8;
-}
-
-/* ================================
-   DIFFERENCE
-================================ */
-
-.difference {
-  background: #f1f5f9 !important;
-  font-weight: bold;
-  color: #dc2626;
-}
-
-/* ================================
+/* =========================================
    BUTTONS
-================================ */
+========================================= */
 
-.save-btn {
-  margin-top: 18px;
+button {
   border: none;
-  background: #2563eb;
-  color: white;
-  padding: 11px 20px;
-  border-radius: 7px;
-  font-size: 14px;
+  border-radius: 6px;
+  padding: 8px 13px;
+  font-size: 12px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  background: #2563eb;
+  color: white;
+  transition: 0.2s ease;
 }
 
-.save-btn:hover {
+button:hover {
   background: #1d4ed8;
   transform: translateY(-1px);
 }
 
-/* ================================
+button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.entry-card > button {
+  margin-top: 16px;
+  padding: 9px 18px;
+}
+
+/* =========================================
+   REPORT FILTER
+========================================= */
+
+.report-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.report-filter .field {
+  min-width: 150px;
+}
+
+/* =========================================
    TABLE
-================================ */
+========================================= */
 
 .table-card {
   overflow: hidden;
@@ -188,12 +219,15 @@ body {
 .table-container {
   width: 100%;
   overflow-x: auto;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 800px;
+  background: white;
+  font-size: 12px;
 }
 
 thead {
@@ -201,81 +235,125 @@ thead {
 }
 
 th {
-  padding: 12px 10px;
+  padding: 11px 10px;
   text-align: left;
-  font-size: 13px;
   color: #334155;
+  font-size: 11px;
+  font-weight: 700;
   white-space: nowrap;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 td {
-  padding: 12px 10px;
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 13px;
+  padding: 10px;
   color: #475569;
+  border-bottom: 1px solid #e2e8f0;
   white-space: nowrap;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 tbody tr:hover {
   background: #f8fafc;
 }
 
-/* ================================
-   TABLE BUTTONS
-================================ */
+/* =========================================
+   TABLE ACTION BUTTONS
+========================================= */
 
 td button {
-  border: none;
-  padding: 7px 11px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-td button:first-child {
+  padding: 5px 9px;
+  font-size: 10px;
   background: #f59e0b;
-  color: white;
 }
 
-td button:first-child:hover {
+td button:hover {
   background: #d97706;
 }
 
-td button:last-child {
+td button + button {
   background: #ef4444;
-  color: white;
 }
 
-td button:last-child:hover {
+td button + button:hover {
   background: #dc2626;
 }
 
-/* ================================
-   MOBILE
-================================ */
+/* =========================================
+   DIFFERENCE COLUMN
+========================================= */
 
-@media (max-width: 800px) {
+table th:nth-child(7),
+table td:nth-child(7) {
+  font-weight: 700;
+}
+
+/*
+   NOTE:
+   Difference ko + green / - red karne ke liye
+   JSX me class lagani padegi.
+*/
+
+/* =========================================
+   REPORT TEXT
+========================================= */
+
+.entry-card p {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
   .summary-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .form-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .header h1 {
-    font-size: 25px;
+  .container {
+    padding: 16px;
   }
 }
 
-@media (max-width: 500px) {
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
   .container {
-    padding: 15px 10px 30px;
+    padding: 10px;
+  }
+
+  .header {
+    padding: 18px;
+  }
+
+  .header h1 {
+    font-size: 21px;
   }
 
   .summary-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+  }
+
+  .summary-card {
+    min-height: 70px;
+    padding: 10px;
+  }
+
+  .summary-card strong {
+    font-size: 15px;
   }
 
   .form-grid {
@@ -283,68 +361,33 @@ td button:last-child:hover {
   }
 
   .entry-card {
-    padding: 18px;
+    padding: 15px;
   }
 
-  .header {
-    padding: 20px;
+  .table-container {
+    overflow-x: auto;
   }
 
-  .header h1 {
-    font-size: 22px;
-  }
-
-  .entry-card h2 {
-    font-size: 19px;
+  table {
+    min-width: 800px;
   }
 }
-/* REPORT CONTROLS */
 
-.report-controls {
-  display: flex;
-  align-items: flex-end;
-  gap: 15px;
-  margin-bottom: 20px;
-  flex-wrap: wrap;
-}
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
-.report-controls select {
-  height: 42px;
-  min-width: 180px;
-  padding: 0 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  background: white;
-  font-size: 14px;
-  color: #1e293b;
-  cursor: pointer;
-  outline: none;
-}
+@media (max-width: 380px) {
 
-.report-controls select:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
-}
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
 
-.report-controls .field {
-  margin: 0;
-}
-/* REPORT DATE INPUTS */
+  .summary-card span {
+    font-size: 10px;
+  }
 
-.report-controls input[type="date"] {
-  height: 42px;
-  min-width: 180px;
-  box-sizing: border-box;
-  padding: 0 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 8px;
-  background: white;
-  font-size: 14px;
-  color: #1e293b;
-  outline: none;
-}
-
-.report-controls input[type="date"]:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+  .summary-card strong {
+    font-size: 14px;
+  }
 }
