@@ -1,125 +1,156 @@
-/* =========================================
+/* =========================================================
    BIJLI GHAR CASH COUNTER
-   MODERN CLEAN UI
-========================================= */
+   MODERN PREMIUM UI
+========================================================= */
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: #f4f7fb;
+  background: #f5f8fc;
   color: #172033;
 }
 
-/* =========================================
+/* =========================================================
    MAIN CONTAINER
-========================================= */
+========================================================= */
 
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
-  padding: 22px;
+  padding: 24px;
 }
 
-/* =========================================
+/* =========================================================
    HEADER
-========================================= */
+========================================================= */
 
 .header {
-  background: white;
-  border-radius: 14px;
-  padding: 24px 28px;
-  margin-bottom: 18px;
-  border-left: 5px solid #2563eb;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff 0%, #f1f7ff 100%);
+  border-radius: 16px;
+  padding: 30px 32px;
+  margin-bottom: 20px;
+  border-left: 5px solid #1769e0;
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.08);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  top: -100px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.07);
 }
 
 .header h1 {
+  position: relative;
+  z-index: 1;
   margin: 0;
-  font-size: 25px;
-  font-weight: 700;
-  color: #172033;
+  font-size: 29px;
+  font-weight: 800;
+  color: #14213d;
+  letter-spacing: -0.4px;
 }
 
 .header p {
-  margin: 6px 0 0;
+  position: relative;
+  z-index: 1;
+  margin: 7px 0 0;
   color: #64748b;
   font-size: 13px;
 }
 
-/* =========================================
+/* =========================================================
    SUMMARY CARDS
-========================================= */
+========================================================= */
 
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 12px;
-  margin-bottom: 18px;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 
 .summary-card {
-  background: white;
-  min-height: 82px;
-  padding: 14px 12px;
-  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  min-height: 105px;
+  padding: 18px 14px;
+  border-radius: 15px;
   text-align: center;
-  border-top: 3px solid #2563eb;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border: 1px solid #e6edf7;
+  border-top: 4px solid #2563eb;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.07);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transition: 0.2s ease;
+
+  transition: all 0.25s ease;
 }
 
 .summary-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 7px 18px rgba(15, 23, 42, 0.10);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
 }
 
 .summary-card span {
   color: #64748b;
   font-size: 11px;
-  margin-bottom: 6px;
+  font-weight: 600;
+  margin-bottom: 7px;
 }
 
 .summary-card strong {
   color: #111827;
-  font-size: 17px;
+  font-size: 22px;
+  font-weight: 800;
 }
 
-/* =========================================
-   ENTRY / REPORT CARD
-========================================= */
+/* =========================================================
+   CARDS
+========================================================= */
 
 .entry-card {
-  background: white;
-  border-radius: 14px;
-  padding: 20px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.07);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 20px;
+  border: 1px solid #e7edf5;
+  border-left: 4px solid #2563eb;
+  box-shadow: 0 7px 25px rgba(15, 23, 42, 0.07);
 }
 
 .entry-card h2 {
-  margin: 0 0 18px;
-  font-size: 18px;
+  margin: 0 0 22px;
+  font-size: 20px;
+  font-weight: 800;
   color: #172033;
 }
 
-/* =========================================
+/* =========================================================
    FORM
-========================================= */
+========================================================= */
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 14px;
+  gap: 16px;
 }
 
 .field {
@@ -129,9 +160,9 @@ body {
 
 .field label {
   font-size: 12px;
-  font-weight: 600;
-  color: #475569;
-  margin-bottom: 6px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 7px;
 }
 
 .field input,
@@ -139,15 +170,25 @@ body {
 input,
 select {
   width: 100%;
-  height: 38px;
-  border: 1px solid #cbd5e1;
-  border-radius: 7px;
-  padding: 0 10px;
-  background: #fff;
+  height: 46px;
+  border: 1px solid #d4deea;
+  border-radius: 9px;
+  padding: 0 13px;
+  background: #ffffff;
   color: #172033;
   font-size: 13px;
   outline: none;
-  transition: 0.2s ease;
+
+  transition: all 0.2s ease;
+}
+
+.field input::placeholder {
+  color: #94a3b8;
+}
+
+.field input:hover,
+.field select:hover {
+  border-color: #aabbd0;
 }
 
 .field input:focus,
@@ -155,62 +196,66 @@ select {
 input:focus,
 select:focus {
   border-color: #2563eb;
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.10);
 }
 
-/* =========================================
+/* =========================================================
    BUTTONS
-========================================= */
+========================================================= */
 
 button {
   border: none;
-  border-radius: 6px;
-  padding: 8px 13px;
+  border-radius: 8px;
+  padding: 10px 16px;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   background: #2563eb;
-  color: white;
-  transition: 0.2s ease;
+  color: #ffffff;
+
+  transition: all 0.2s ease;
 }
 
 button:hover {
   background: #1d4ed8;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(37, 99, 235, 0.22);
 }
 
 button:active {
   transform: translateY(0);
 }
 
-/* =========================================
+/* =========================================================
    SAVE BUTTON
-========================================= */
+========================================================= */
 
 .entry-card > button {
-  margin-top: 16px;
-  padding: 9px 18px;
+  margin-top: 20px;
+  padding: 12px 22px;
+  font-size: 13px;
+  border-radius: 9px;
 }
 
-/* =========================================
+/* =========================================================
    REPORT FILTER
-========================================= */
+========================================================= */
 
 .report-filter {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   align-items: end;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .report-filter .field {
-  min-width: 150px;
+  min-width: 190px;
 }
 
-/* =========================================
+/* =========================================================
    TABLE
-========================================= */
+========================================================= */
 
 .table-card {
   overflow: hidden;
@@ -219,36 +264,42 @@ button:active {
 .table-container {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #e2e8f0;
-  border-radius: 10px;
+  border: 1px solid #dfe7f1;
+  border-radius: 12px;
+  background: #ffffff;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  background: white;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
   font-size: 12px;
 }
 
 thead {
-  background: #f1f5f9;
+  background: #eef4fc;
 }
 
 th {
-  padding: 11px 10px;
+  padding: 14px 12px;
   text-align: left;
-  color: #334155;
+  color: #26364d;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 800;
   white-space: nowrap;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #dbe4ef;
 }
 
 td {
-  padding: 10px;
+  padding: 13px 12px;
   color: #475569;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e7edf5;
   white-space: nowrap;
+}
+
+tbody tr {
+  transition: background 0.15s ease;
 }
 
 tbody tr:last-child td {
@@ -256,24 +307,28 @@ tbody tr:last-child td {
 }
 
 tbody tr:hover {
-  background: #f8fafc;
+  background: #f7faff;
 }
 
-/* =========================================
+/* =========================================================
    TABLE ACTION BUTTONS
-========================================= */
+========================================================= */
 
 td button {
-  padding: 5px 9px;
+  padding: 7px 11px;
   font-size: 10px;
+  border-radius: 6px;
   background: #f59e0b;
+  box-shadow: none;
 }
 
 td button:hover {
   background: #d97706;
+  box-shadow: none;
 }
 
 td button + button {
+  margin-left: 5px;
   background: #ef4444;
 }
 
@@ -281,35 +336,71 @@ td button + button:hover {
   background: #dc2626;
 }
 
-/* =========================================
+/* =========================================================
    DIFFERENCE COLUMN
-========================================= */
+========================================================= */
 
 table th:nth-child(7),
 table td:nth-child(7) {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 /*
-   NOTE:
-   Difference ko + green / - red karne ke liye
-   JSX me class lagani padegi.
+   Difference ke liye JSX me:
+   difference-positive
+   difference-negative
+   difference-zero
+
+   classes use hongi.
 */
 
-/* =========================================
+.difference-positive {
+  color: #16a34a !important;
+  font-weight: 800;
+}
+
+.difference-negative {
+  color: #dc2626 !important;
+  font-weight: 800;
+}
+
+.difference-zero {
+  color: inherit !important;
+  font-weight: 600;
+}
+
+/* =========================================================
    REPORT TEXT
-========================================= */
+========================================================= */
 
 .entry-card p {
   color: #64748b;
   font-size: 13px;
 }
 
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
+/* =========================================================
+   SCROLLBAR
+========================================================= */
 
-@media (max-width: 900px) {
+.table-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
 
   .summary-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -320,13 +411,13 @@ table td:nth-child(7) {
   }
 
   .container {
-    padding: 16px;
+    padding: 18px;
   }
 }
 
-/* =========================================
+/* =========================================================
    RESPONSIVE - MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
@@ -335,11 +426,16 @@ table td:nth-child(7) {
   }
 
   .header {
-    padding: 18px;
+    padding: 22px 18px;
+    border-radius: 13px;
   }
 
   .header h1 {
-    font-size: 21px;
+    font-size: 22px;
+  }
+
+  .header p {
+    font-size: 12px;
   }
 
   .summary-grid {
@@ -348,39 +444,9 @@ table td:nth-child(7) {
   }
 
   .summary-card {
-    min-height: 70px;
-    padding: 10px;
-  }
-
-  .summary-card strong {
-    font-size: 15px;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .entry-card {
-    padding: 15px;
-  }
-
-  .table-container {
-    overflow-x: auto;
-  }
-
-  table {
-    min-width: 800px;
-  }
-}
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 380px) {
-
-  .summary-grid {
-    grid-template-columns: 1fr 1fr;
+    min-height: 82px;
+    padding: 12px 8px;
+    border-radius: 11px;
   }
 
   .summary-card span {
@@ -388,6 +454,71 @@ table td:nth-child(7) {
   }
 
   .summary-card strong {
-    font-size: 14px;
+    font-size: 17px;
+  }
+
+  .entry-card {
+    padding: 16px;
+    border-radius: 13px;
+  }
+
+  .entry-card h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .field input,
+  .field select,
+  input,
+  select {
+    height: 44px;
+  }
+
+  .entry-card > button {
+    width: 100%;
+  }
+
+  .report-filter {
+    display: block;
+  }
+
+  .report-filter .field {
+    width: 100%;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 850px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .summary-card strong {
+    font-size: 15px;
+  }
+
+  .summary-card span {
+    font-size: 9px;
+  }
+
+  .container {
+    padding: 7px;
   }
 }
